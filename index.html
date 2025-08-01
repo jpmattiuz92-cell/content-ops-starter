@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Aura - Roupas Minimalistas</title>
+  <style>
+    /* Reset básico */
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background: #fff;
+      color: #222;
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      font-weight: 300;
+    }
+
+    header {
+      background: #f5f5f5;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #ddd;
+    }
+
+    header .logo {
+      font-size: 1.8rem;
+      font-weight: 600;
+      color: #111;
+      letter-spacing: 2px;
+      user-select: none;
+    }
+
+    nav a {
+      color: #111;
+      text-decoration: none;
+      margin-left: 30px;
+      font-weight: 400;
+      font-size: 1rem;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #7a5c38; /* tom bege escuro */
+    }
+
+    .hero {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 65vh;
+      background: url('https://images.unsplash.com/photo-1521334884684-d80222895322?auto=format&fit=crop&w=1350&q=80') no-repeat center/cover;
+      color: #fff;
+      text-align: center;
+      padding: 0 20px;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      margin-bottom: 15px;
+      text-shadow: 0 0 10px rgba(0,0,0,0.6);
+    }
+
+    .hero p {
+      font-size: 1.3rem;
+      font-weight: 300;
+      margin-bottom: 30px;
+      text-shadow: 0 0 10px rgba(0,0,0,0.6);
+    }
+
+    .btn-whatsapp {
+      background: #25D366;
+      color: white;
+      padding: 15px 30px;
+      font-size: 1.2rem;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      box-shadow: 0 5px 10px rgba(37,211,102,0.4);
+      transition: background 0.3s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      font-weight: 600;
+      user-select: none;
+    }
+
+    .btn-whatsapp:hover {
+      background: #1ebe5b;
+    }
+
+    main {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 0 20px;
+      flex-grow: 1;
+    }
+
+    section {
+      margin-bottom: 60px;
+    }
+
+    h2 {
+      font-weight: 600;
+      font-size: 2rem;
+      margin-bottom: 25px;
+      color: #7a5c38;
+      text-align: center;
+      letter-spacing: 1.5px;
+    }
+
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+      gap: 30px;
+    }
+
+    .product-card {
+      border: 1px solid #ddd;
+      border-radius: 12px;
+      overflow: hidden;
+      background: #fafafa;
+      transition: box-shadow 0.3s ease;
+    }
+
+    .product-card:hover {
+      box-shadow: 0 6px 15px rgba(122,92,56,0.3);
+    }
+
+    .product-card img {
+      width: 100%;
+      display: block;
+      object-fit: cover;
+      height: 320px;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .product-info {
+      padding: 15px 20px;
+      text-align: center;
+    }
+
+    .product-info h3 {
+      font-weight: 500;
+      margin-bottom: 10px;
+      font-size: 1.2rem;
+      color: #333;
+    }
+
+    .product-info p {
+      color: #666;
+      font-weight: 300;
+      margin-bottom: 15px;
+      font-size: 1rem;
+    }
+
+    .product-info a {
+      text-decoration: none;
+      background: #7a5c38;
+      color: #fff;
+      padding: 10px 25px;
+      border-radius: 25px;
+      font-weight: 600;
+      transition: background 0.3s ease;
+      display: inline-block;
+    }
+
+    .product-info a:hover {
+      background: #5b442c;
+    }
+
+    footer {
+      background: #f5f5f5;
+      text-align: center;
+      padding: 25px 20px;
+      font-size: 0.9rem;
+      color: #666;
+      border-top: 1px solid #ddd;
+      user-select: none;
+    }
+
+    /* Responsividade */
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 2.2rem;
+      }
+      .hero p {
+        font-size: 1rem;
+      }
+      nav a {
+        margin-left: 15px;
+        font-size: 0.9rem;
+      }
+      .product-card img {
+        height: 240px;
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">Aura</div>
+  <nav>
+    <a href="#produtos">Produtos</a>
+    <a href="#sobre">Sobre</a>
+    <a href="#contato">Contato</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div>
+    <h1>Aura - Estilo Minimalista</h1>
+    <p>Polos, Oversized, Roupas Lisass e Sofisticadas</p>
+    <a href="https://wa.me/5535998840725" target="_blank" class="btn-whatsapp" aria-label="Fale conosco no WhatsApp">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="white" viewBox="0 0 24 24">
+        <path d="M20.52 3.48A11.91 11.91 0 0012 0C5.373 0 0 5.373 0 12a11.96 11.96 0 001.797 6.362L0 24l5.854-1.835A11.937 11.937 0 0012 24c6.627 0 12-5.373 12-12 0-3.199-1.254-6.203-3.48-8.52zm-7.213 16.334c-2.144 0-4.144-.667-5.796-1.797l-.41-.249-3.46 1.084 1.14-3.367-.267-.437a8.557 8.557 0 01-1.32-4.726c0-4.745 3.853-8.598 8.598-8.598 2.3 0 4.46.895 6.082 2.518a8.556 8.556 0 012.518 6.08c0 4.745-3.855 8.598-8.602 8.598zm4.506-6.03c-.246-.123-1.45-.717-1.676-.798-.227-.082-.392-.123-.556.123-.164.246-.64.798-.785.962-.145.164-.29.184-.536.062-.246-.123-1.04-.384-1.98-1.22-.732-.653-1.224-1.46-1.368-1.707-.145-.246-.016-.38.11-.502.113-.112.246-.29.369-.435.123-.144.164-.246.246-.41.082-.164.041-.308-.02-.43-.062-.123-.556-1.34-.76-1.83-.2-.48-.404-.414-.556-.422-.145-.006-.31-.008-.476-.008-.164 0-.43.062-.656.308-.227.246-.865.848-.865 2.066 0 1.217.885 2.393 1.01 2.56.123.164 1.742 2.66 4.217 3.727.59.254 1.05.406 1.409.52.59.19 1.13.163 1.56.099.476-.07 1.45-.59 1.656-1.16.206-.57.206-1.057.144-1.16-.063-.102-.228-.164-.474-.287z"/>
+      </svg>
+      WhatsApp
+    </a>
+  </div>
+</section>
+
+<main>
+  <section id="produtos">
+    <h2>Produtos</h2>
+    <div class="products-grid">
+
+      <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1520975920457-3466e3d9c2f0?auto=format&fit=crop&w=600&q=80" alt="Polo Branca Minimalista" />
+        <div class="product-info">
+          <h3>Polo Branca Minimalista</h3>
+          <p>R$ 129,90</p>
+          <a href="https://wa.me/5535998840725?text=Olá!%20Tenho%20interesse%20na%20Polo%20Branca%20Minimalista." target="_blank" rel="noopener">Comprar</a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1562158070-898bbe12343d?auto=format&fit=crop&w=600&q=80" alt="Camiseta Oversized Preta" />
+        <div class="product-info">
+          <h3>Camiseta Oversized Preta</h3>
+          <p>R$ 99,90</p>
+          <a href="https://wa.me/5535998840725?text=Olá!%20Tenho%20interesse%20na%20Camiseta%20Over
